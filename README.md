@@ -4,17 +4,17 @@ peopleviewer
 An Exhibit Based People Viewer
 
 
-1. Preamble
+## Preamble
 	The following files are part of the Exhibit based People Viewer, which has been developed for the
 	MLODE 2012 Conference to visualize the conference attendees. It enables faceted search and 
 	exploration of a collaboratively edited Google Spreadsheet. 
 
-2. Files overview
+## Files overview
 	csv_to_tsv.py 		-- python script to convert a comma separated file into a tab separated file
 	update_data_csv.sh	-- shell script to fetch data from a Google spreadsheet and convert into a local exhibit json data file
 	people.html			-- exhibit presentation configuration file for displaying the json data file
 	
-3. How it works
+## How it works
 	You can use a Google Spreadsheet to describe some subjects like persons with properties and associated values. This spreadsheet
 	gets converted by the google api to a csv file and is fetched by the update script. Then the little python script is used to
 	convert it into a tsv file. Afterwards the babel translator is used by the update script to convert the tsv file into a exhibit json file.
@@ -24,14 +24,14 @@ An Exhibit Based People Viewer
 	Actually Exhibit is able to import spreadsheets directly. But since Google changed its API it doesn't work anymore.
 	Babel also supports xls support for creating json files. But the Google API had some problems with exporting valid xls files.
 	
-4. Local Deployment
+## Local Deployment
 
-	4.1 Requirements
+	### Requirements
 		unix webserver
 		unix tools wget, cat, curl
 		python greater than 2.3
 		
-	4.2 Test with example configuration
+	### Test with example configuration
 		Just copy the files to any directory of your webserver and change to that directory. Make the update_data_csv.sh excutable and run it.
 		Now you should see the new people.json file. If not have a look at the console output to check what the problem is. If you're sure you met
 		all the requirements, probably the Google spreadsheet has been deleted or Google API or the Babel API changed. Try to run each step manually
