@@ -7,6 +7,8 @@ An Exhibit Based People Viewer
 The following files are part of the Exhibit based People Viewer, which has been developed for the MLODE 2012 Conference (http://sabre2012.infai.org/mlode) to visualize the conference attendees. 
 It enables faceted search and exploration of a collaboratively edited Google Spreadsheet. The initial design and code was created Johannes Frey .
 Note that there are different branches for stable deployments for MLODE, DBpedia(planned) and OWLG(planned)
+For deployed examples you can look here: 
+1. MLODE 2012: http://mlode.nlp2rdf.org/peopleviewer/mlode2012.html
 
 ##2. Files overview
 csv_to_tsv.py 		-- python script to convert a comma separated file into a tab separated file

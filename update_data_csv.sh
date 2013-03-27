@@ -3,7 +3,7 @@
 #NOTE the URL should look like in the example. Watch out that there is no hash tag at the end of the URL.	
 GSPREADSHEETURL="https://docs.google.com/spreadsheet/ccc?key=0Akvj-QyYXjmcdDVmNE9GZkpkZGVHMkZ3bmsyUTBGdnc"
 # absolute path is necessary for cronjob
-PEOPLEVIEWERPATH="/var/www/peopleviewer"
+PEOPLEVIEWERPATH="/var/www/mlode.nlp2rdf.org/peopleviewer"
 
 # switch path
 cd $PEOPLEVIEWERPATH
