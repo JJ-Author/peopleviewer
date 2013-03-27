@@ -8,12 +8,13 @@ The following files are part of the Exhibit based People Viewer, which has been 
 It enables faceted search and exploration of a collaboratively edited Google Spreadsheet. The initial design and code was created Johannes Frey .
 Note that there are different branches for stable deployments for MLODE, DBpedia(planned) and OWLG(planned)
 For deployed examples you can look here: 
+
 1. MLODE 2012: http://mlode.nlp2rdf.org/peopleviewer/mlode2012.html
 
 ##2. Files overview
-csv_to_tsv.py 		-- python script to convert a comma separated file into a tab separated file
-update_data_csv.sh	-- shell script to fetch data from a Google spreadsheet and convert into a local exhibit json data file
-people.html			-- exhibit presentation configuration file for displaying the json data file
+* csv_to_tsv.py 		-- python script to convert a comma separated file into a tab separated file
+* update_data_csv.sh	-- shell script to fetch data from a Google spreadsheet and convert into a local exhibit json data file
+* people.html			-- exhibit presentation configuration file for displaying the json data file
 
 ##3. How it works
 You can use a Google Spreadsheet to describe some subjects like persons with properties and associated values. 
@@ -30,9 +31,9 @@ Babel also supports xls support for creating json files. But the Google API had 
 ##4. Local Deployment
 
 ###4.1 Requirements
-unix webserver
-unix tools wget, cat, curl
-python greater than 2.3
+* unix webserver
+* unix tools wget, cat, curl
+* python greater than 2.3
 
 ###4.2 Test with example configuration
 Just copy the files to any directory of your webserver and change to that directory. 
@@ -76,9 +77,13 @@ limitations under the License.
 
 		
 ##6. References
+
 [1]	http://simile-widgets.org/wiki/How_to_make_an_exhibit_from_data_fed_directly_from_a_Google_Spreadsheet#Formatting_the_Data
+
 [2]	http://simile-widgets.org/wiki/How_to_make_an_exhibit_from_data_fed_directly_from_a_Google_Spreadsheet#Dates_in_Google_Spreadsheets
+
 [3]	http://simile-widgets.org/wiki/Exhibit
+
 [4]	http://simile-widgets.org/wiki/Reference_Documentation_for_Exhibit
 
 
