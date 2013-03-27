@@ -6,12 +6,12 @@ An Exhibit Based People Viewer
 ##1. Preamble
 The following files are part of the Exhibit based People Viewer, which has been developed for the MLODE 2012 Conference (http://sabre2012.infai.org/mlode) to visualize the conference attendees. 
 It enables faceted search and exploration of a collaboratively edited Google Spreadsheet. The initial design and code was created Johannes Frey .
+Note that there are different branches for stable deployments for MLODE, DBpedia(planned) and OWLG(planned)
 
 ##2. Files overview
 csv_to_tsv.py 		-- python script to convert a comma separated file into a tab separated file
 update_data_csv.sh	-- shell script to fetch data from a Google spreadsheet and convert into a local exhibit json data file
 people.html			-- exhibit presentation configuration file for displaying the json data file
-stable 				-- this folder contains stable deployments of the viewer. Each oneis configured a little bit different, feel free to use as template.
 
 ##3. How it works
 You can use a Google Spreadsheet to describe some subjects like persons with properties and associated values. 
