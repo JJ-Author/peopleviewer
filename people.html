@@ -1,0 +1,160 @@
+<html>
+<head>
+    <title>Involved People -  3rd DBpedia Community Meeting 2015</title>
+
+    <link href="people.json" type="application/json" rel="exhibit/data" />
+
+    <script src="http://static.simile.mit.edu/exhibit/api/exhibit-api.js" type="text/javascript"></script>
+
+    <style>
+        body {
+            font-family:    Tahoma, Arial, sans serif;
+            font-size:      8pt;
+            margin:         0;
+            padding:        0;
+        }
+        table { font-size: 100%; }
+        tr { vertical-align: top; }
+        
+        #title-area {
+            padding:        0.09em 2em;
+            background:     #BCB79E;
+        }
+        #content-area {
+            padding:        2em;
+        }
+        
+        span.exhibit-collectionView-group-count {
+            color:       #ccc;
+            font-weight: normal;
+        }
+        div.exhibit-facet-value-selected {
+            background:  none;
+            font-weight: bold;
+        }
+        
+        div.person-thumbnail {
+            float:      left;
+            width:      150px;
+            height:  	220px;
+            border:     1px solid #BCB79E;
+            background: #F0FFF0;
+            padding:    1em;
+            margin:     0.5em;
+            text-align: center;
+			
+        }
+		
+		img.picture {
+			max-width:150px;
+			max-height:150px;
+		}
+		
+		div.pictureContainer{ 
+
+			width:150px; 
+			height:150px;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+		
+        .name {
+            font-weight: normal;
+			font-variant: small-caps;
+			Font-size: medium;
+        }
+		.role {
+			font-style:italic;
+		}
+		
+		.statement {
+			font-family: 'italic Times', serif;
+		}
+
+    </style>
+</head> 
+<body>
+<div id="title-area">
+    <h1>Involved People at <a href="http://wiki.dbpedia.org/meetings/Dublin2015" target="_blank">3rd DBpedia Community Meeting 2015</a><br>
+        <small><small><small> Can't find yourself? Do you belong to one of the communities? 
+                You can add yourself <a href="https://docs.google.com/spreadsheets/d/1XtgLLAekZfPTpEg0NB7pGUVaPUIQ8MobaRkK7aQmimY" target="_blank">here</a>.<br>
+                Source Code for this app <a href="https://github.com/AKSW/peopleviewer">here</a>
+        </small></small></small>
+    </h1>
+</div> 
+<div id="content-area">
+    <table width="100%">
+        <tr>
+            <td id="left-column" width="15%">
+				<div ex:role="facet" ex:facetLabel="Search" ex:facetClass="TextSearch"></div>
+                <div ex:role="facet" ex:expression=".workshop_role_description" ex:facetLabel="Workshop Role" id="group-facet" ex:height="12em"></div>
+		<div ex:role="facet" ex:expression=".Affiliation_or_Company" ex:facetLabel="Affiliation" id="group-facet2" ex:height="40em"></div>		
+            </td>
+            <td id="middle-column">
+                <div ex:role="viewPanel" style="padding: 1em 0.5in;">
+					<div ex:role="lens" ex:onshow="prepareLens(this);" ex:formats="date { mode: medium; show: date }">
+					<div class="exhibit-lens-title"><span ex:content=".label"></span>&nbsp;(<span ex:control="item-link"></span>)</div>
+						<div class="exhibit-lens-body">
+								<table class="exhibit-lens-properties">
+									<tbody>
+										<tr class="exhibit-lens-property" ex:if-exists=".label">
+											<td class="exhibit-lens-property-name">Name: </td>
+											<td class="exhibit-lens-property-values"><span class="exhibit-value" ex:content=".label"></span></td>
+										</tr>
+										<tr class="exhibit-lens-property" ex:if-exists=".workshop_role_description">
+											<td class="exhibit-lens-property-name">Workshop Role: </td>
+											<td class="exhibit-lens-property-values"><span class="exhibit-value" ex:content=".workshop_role_description"></span></td>
+										</tr>
+										<tr class="exhibit-lens-property" ex:if-exists=".Community">
+											<td class="exhibit-lens-property-name">Community: </td>
+											<td class="exhibit-lens-property-values"><span class="exhibit-value" ex:content=".Community"></span></td>
+										</tr>
+										<tr class="exhibit-lens-property" ex:if-exists=".homepage">
+											<td class="exhibit-lens-property-name">Homepage: </td>
+											<td class="exhibit-lens-property-values"><a class="exhibit-value" ex:href-content=".homepage" target="_blank">go to Homepage</a></td>
+										</tr>
+										<tr class="exhibit-lens-property" ex:if-exists=".Affiliation_or_Company">
+											<td class="exhibit-lens-property-name">Affiliation or Company: </td>
+											<td class="exhibit-lens-property-values"><span class="exhibit-value" ex:content=".Affiliation_or_Company"></span></td>
+										</tr>
+										<tr class="exhibit-lens-property" ex:if-exists=".position_statement">
+											<td class="exhibit-lens-property-name">Position Statement: </td>
+											<td class="exhibit-lens-property-values"><span class="exhibit-value" ex:content=".position_statement"></span></td>
+										</tr>
+										<tr class="exhibit-lens-property" ex:if-exists=".attending_dates_gen">
+											<td class="exhibit-lens-property-name">Attending Conference on: </td>
+											<td class="exhibit-lens-property-values"><span class="exhibit-value" ex:content=".attending_dates_gen"></span></td>
+										</tr>
+										
+									</tbody>
+								</table>
+						</div>
+					</div>
+                    <div ex:role="view"
+                        ex:viewClass="Thumbnail"
+                        ex:showAll="true"
+                        ex:orders=".label"
+                        ex:possibleOrders=".label, workshop_role_description, .Community, .Affiliation_or_Company">
+                        <div ex:role="lens" class="person-thumbnail">
+                            <div class="pictureContainer"><img class="picture" ex:if-exists=".picture_link" ex:src-content=".picture_link"/></div>
+							<div class="name"><span ex:content="value"></span></div>
+                            <div class="role"><span ex:content=".workshop_role_description"></span></div>
+							<div class="statement" ex:if-exists=".position_statement">&#171;<span ex:if-exists=".position_statement" ex:content=".position_statement" ex:formats="text { max-length: 100 }"></span>&#187;</div>
+							<!--<div class="statement" ex:if-exists=".position_statement"><a></a></div>-->
+                            <!--<div class="email"><a ex:href-subcontent="mailto:{{.email}}" ex:content=".email"></a></div>-->
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td id="right-column" width="15%">
+                <div ex:role="facet" ex:expression=".Community" ex:facetLabel="Community" ex:height="20em"></div>
+				<div ex:role="facet" ex:expression=".attending" ex:facetLabel="Attending" ex:height="6em"></div>
+<!--				<div ex:role="facet" ex:expression=".attending_dates_gen" ex:facetLabel="Attending Conference on" ex:height="8em"></div>
+                <div ex:role="facet" ex:expression=".registered" ex:facetLabel="Registered for Conference" ex:height="6em"></div> -->
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
