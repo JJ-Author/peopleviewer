@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #NOTE the URL should look like in the example. Watch out that there is no hash tag at the end of the URL.	
-GSPREADSHEETURL="https://docs.google.com/spreadsheet/ccc?key=0Akvj-QyYXjmcdDVmNE9GZkpkZGVHMkZ3bmsyUTBGdnc"
+GSPREADSHEETURL="https://docs.google.com/spreadsheet/ccc?key=1XtgLLAekZfPTpEg0NB7pGUVaPUIQ8MobaRkK7aQmimY"
 # absolute path is necessary for cronjob
-PEOPLEVIEWERPATH="/var/www/mlode.nlp2rdf.org/peopleviewer"
+PEOPLEVIEWERPATH="/home/swp14-sfm/git/peopleviewer"
 
 # switch path
 cd $PEOPLEVIEWERPATH
